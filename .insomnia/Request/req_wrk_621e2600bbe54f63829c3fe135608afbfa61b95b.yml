@@ -1,0 +1,33 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afbfa61b95b
+type: Request
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617188623086
+created: 1617188623086
+url: "{{ base_url }}/location/{{ id }}"
+name: /location/{id}
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "id": 0,
+      "name": "string",
+      "square": "string",
+      "own_type": "string",
+      "contract_id": 0,
+      "contract_name": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1617188623086
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

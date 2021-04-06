@@ -1,0 +1,24 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afbc6593a71
+type: Request
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617179738493
+created: 1617179738493
+url: "{{ base_url }}/task/{{ id }}"
+name: Deletes a task
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - name: api_key
+    disabled: true
+    value: string
+authentication: {}
+metaSortKey: -1617179738493
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

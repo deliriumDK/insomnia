@@ -1,0 +1,32 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afb79b19644
+type: Request
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617185282223
+created: 1617185282223
+url: "{{ base_url }}/report/"
+name: create new entity
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "id": 0,
+      "name": "qwe",
+      "object_id": 0,
+      "object_type": "string",
+      "status": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1617185282223
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

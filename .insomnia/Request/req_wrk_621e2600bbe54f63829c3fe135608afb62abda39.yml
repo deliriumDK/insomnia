@@ -1,0 +1,32 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afb62abda39
+type: Request
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617188623053
+created: 1617188623053
+url: "{{ base_url }}/process/"
+name: /process/
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "id": 0,
+      "name": "string",
+      "nextStep": 0,
+      "prevStep": 0,
+      "complete": true
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1617188623053
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

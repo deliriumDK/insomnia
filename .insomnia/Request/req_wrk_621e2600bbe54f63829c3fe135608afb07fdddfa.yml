@@ -1,0 +1,27 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afb07fdddfa
+type: Request
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617188623090
+created: 1617188623090
+url: "{{ base_url }}/location/"
+name: get all locations
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: own_type
+    disabled: true
+    value: available
+  - name: square
+    disabled: true
+    value: available
+headers: []
+authentication: {}
+metaSortKey: -1617188623090
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,32 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afbc5c0937e1
+type: Request
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617185282239
+created: 1617185282239
+url: "{{ base_url }}/report/{{ id }}"
+name: Update an existing entity
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "id": 0,
+      "name": "qwe",
+      "object_id": 0,
+      "object_type": "string",
+      "status": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1617185282239
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

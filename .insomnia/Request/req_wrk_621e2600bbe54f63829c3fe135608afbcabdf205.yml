@@ -1,0 +1,30 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afbcabdf205
+type: Request
+parentId: fld_wrk_621e2600bbe54f63829c3fe135608afbe7116313
+modified: 1617102712290
+created: 1617102712290
+url: "{{ base_url }}/report/"
+name: get all entity
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: status
+    disabled: true
+    value: available
+  - name: city
+    disabled: true
+    value: available
+  - name: create_date
+    disabled: true
+    value: "null"
+headers: []
+authentication: {}
+metaSortKey: -1617102712290
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

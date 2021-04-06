@@ -1,0 +1,21 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afb8e7841ae1
+type: Request
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617179738499
+created: 1617179738499
+url: "{{ base_url }}/process/{{ processId }}"
+name: Update an existing pet
+description: ""
+method: PUT
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1617179738499
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,21 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afb963ec739
+type: Request
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617188623051
+created: 1617188623051
+url: "{{ base_url }}/process/{{ id }}"
+name: /process/{id}
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1617188623051
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,52 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afbefabe565
+type: Request
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617188623046
+created: 1617188623046
+url: "{{ base_url }}/task/"
+name: /task/
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "id": 0,
+      "name": "string",
+      "creation_date": "string",
+      "dates": {
+        "date_type": "string",
+        "date_value": "string"
+      },
+      "details": {
+        "task_id": 0,
+        "task_type": "string",
+        "details": "string",
+        "solution": "string"
+      },
+      "aptd_user": {
+        "id": 0,
+        "login": "string",
+        "fullName": "string",
+        "email": "string",
+        "userStatus": 0
+      },
+      "file": {
+        "id": 0,
+        "name": "string",
+        "path": "string"
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1617188623046
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

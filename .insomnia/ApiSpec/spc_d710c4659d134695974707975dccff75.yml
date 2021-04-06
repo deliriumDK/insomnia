@@ -1,0 +1,990 @@
+_id: spc_d710c4659d134695974707975dccff75
+type: ApiSpec
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617700756269
+created: 1616677916535
+fileName: entiry-name.yaml
+contents: >-
+  openapi: 3.0.0
+
+  info:
+    description: "supr service"
+    version: 1.0.0
+    title: SUPR
+  tags:
+    - name: user
+      description: description for tag
+  paths:
+    /location/:
+      get:
+        tags:
+          - location
+        parameters:
+          - name: own_type
+            in: query
+            explode: true
+            schema:
+              type: array
+              items:
+                type: string
+                default: available
+          - name: square
+            in: query
+            explode: true
+            schema:
+              type: array
+              items:
+                type: string
+                default: available
+        summary: get all locations
+        operationId: get_all_locations
+        responses:
+          "405":
+            description: Invalid input
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/location"
+      post:
+        tags:
+          - location
+        requestBody:
+          $ref: "#/components/requestBodies/location"
+        responses:
+          "400":
+            description: Invalid ID supplied
+          "405":
+            description: Validation exception
+    /location/{id}:
+      get:
+        tags:
+          -  location
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/location"
+          "400":
+            description: Invalid status value
+      patch:
+        tags:
+          - location
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        description: ""
+        operationId: update_location
+        requestBody:
+          $ref: "#/components/requestBodies/location"
+        responses:
+          "400":
+            description: Invalid ID supplied
+          "404":
+            description: location not found
+          "405":
+            description: Validation exception
+      delete:
+        tags:
+          - location
+        description: ""
+        operationId: delete_location
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        responses:
+          "400":
+            description: Invalid ID
+          "404":
+            description: location not found
+    /object/:
+      get:
+        tags:
+          - object
+        parameters:
+          - name: status
+            in: query
+            explode: true
+            schema:
+              type: array
+              items:
+                type: string
+                default: available
+        operationId: get_all_objects
+        responses:
+          "405":
+            description: Invalid input
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/object"
+      post:
+        tags:
+          - object
+        requestBody:
+          $ref: "#/components/requestBodies/object"
+        responses:
+          "400":
+            description: Invalid parameters
+          "405":
+            description: Validation exception
+    /object/{id}:
+      get:
+        tags:
+          -  object
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/object"
+          "400":
+            description: Invalid status value
+      patch:
+        tags:
+          - object
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        operationId: update_object
+        requestBody:
+          $ref: "#/components/requestBodies/object"
+        responses:
+          "400":
+            description: Invalid ID supplied
+          "404":
+            description: object not found
+          "405":
+            description: Validation exception
+      delete:
+        tags:
+          - object
+        operationId: delete_object
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        responses:
+          "400":
+            description: Invalid ID
+          "404":
+            description: object not found
+    /contract/:
+      get:
+        tags:
+          - contract
+        parameters:
+          - name: status
+            in: query
+            explode: true
+            schema:
+              type: array
+              items:
+                type: string
+                default: available
+        operationId: get_contracts
+        responses:
+          "405":
+            description: Invalid input
+      post:
+        tags:
+          - contract
+        requestBody:
+          $ref: "#/components/requestBodies/contract"
+        responses:
+          "400":
+            description: Invalid ID supplied
+          "405":
+            description: Validation exception
+    /contract/{id}:
+      get:
+        tags:
+          -  contract
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/contract"
+          "400":
+            description: Invalid status value
+      patch:
+        tags:
+          - contract
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        operationId: update_contract
+        requestBody:
+          $ref: "#/components/requestBodies/contract"
+        responses:
+          "400":
+            description: Invalid ID supplied
+          "404":
+            description: contract not found
+          "405":
+            description: Validation exception
+      delete:
+        tags:
+          - contract
+        description: ""
+        operationId: delete_contract
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        responses:
+          "400":
+            description: Invalid ID
+          "404":
+            description: contract not found
+    /contractor/:
+      get:
+        tags:
+          - contractor
+        parameters:
+          - name: status
+            in: query
+            explode: true
+            schema:
+              type: array
+              items:
+                type: string
+                default: available
+        operationId: get_all_contractors
+        responses:
+          "405":
+            description: Invalid input
+      post:
+        tags:
+          - contractor
+        requestBody:
+          $ref: "#/components/requestBodies/contractor"
+        responses:
+          "400":
+            description: Invalid body parameters
+          "405":
+            description: Validation exception
+    /contractor/{id}:
+      get:
+        tags:
+          -  contractor
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/contractor"
+          "400":
+            description: Invalid status value
+      patch:
+        tags:
+          - contractor
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        operationId: updateEntity
+        requestBody:
+          $ref: "#/components/requestBodies/contractor"
+        responses:
+          "400":
+            description: Invalid ID supplied
+          "404":
+            description: contractor not found
+          "405":
+            description: Validation exception
+      delete:
+        tags:
+          - contractor
+        operationId: deleteEntity
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        responses:
+          "400":
+            description: Invalid ID
+          "404":
+            description: cpntractor not found
+    /report/:
+      get:
+        tags:
+          - report
+        parameters:
+          - name: status
+            in: query
+            explode: true
+            schema:
+              type: array
+              items:
+                type: string
+                default: available
+        operationId: getEntity
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/report"
+          "405":
+            description: Invalid input
+      post:
+        tags:
+          - report
+        requestBody:
+          $ref: "#/components/requestBodies/report"
+        responses:
+          "400":
+            description: Invalid parameters
+          "405":
+            description: Validation exception
+    /report/{id}:
+      get:
+        tags:
+          -  report
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/report"
+          "400":
+            description: Invalid status value
+      patch:
+        tags:
+          - report
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        operationId: updateEntity
+        requestBody:
+          $ref: "#/components/requestBodies/report"
+        responses:
+          "400":
+            description: Invalid ID supplied
+          "404":
+            description: report not found
+          "405":
+            description: Validation exception
+      delete:
+        tags:
+          - report
+        operationId: deleteEntity
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        responses:
+          "400":
+            description: Invalid ID
+          "404":
+            description: entity not found
+    /process/:
+      get:
+        tags:
+          - process
+        parameters:
+          - name: status
+            in: query
+            explode: true
+            schema:
+              type: array
+              items:
+                type: string
+                default: available
+          - name: city
+            in: query
+            explode: true
+            schema:
+              type: array
+              items:
+                type: string
+                default: available
+          - name: create_date
+            in: query
+            explode: true
+            schema:
+              items:
+                type: string
+                default: available
+        operationId: getEntity
+        responses:
+          "405":
+            description: Invalid input
+      post:
+        tags:
+          - process
+        requestBody:
+          $ref: "#/components/requestBodies/process"
+        responses:
+          "400":
+            description: Invalid ID supplied
+          "404":
+            description: Pet not found
+          "405":
+            description: Validation exception
+    /process/{id}:
+      get:
+        tags:
+          -  process
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+              format: int64
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/process"
+          "400":
+            description: Invalid status value
+      patch:
+        tags:
+          - process
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+              format: int64
+        operationId: updateEntity
+        requestBody:
+          $ref: "#/components/requestBodies/process"
+        responses:
+          "400":
+            description: Invalid ID supplied
+          "404":
+            description: entity not found
+          "405":
+            description: Validation exception
+      delete:
+        tags:
+          - process
+        operationId: deleteEntity
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        responses:
+          "400":
+            description: Invalid ID
+          "404":
+            description: entity not found
+    /task/:
+      get:
+        tags:
+          - task
+        parameters:
+          - name: status
+            in: query
+            explode: true
+            schema:
+              type: array
+              items:
+                type: string
+                default: available
+          - name: city
+            in: query
+            explode: true
+            schema:
+              type: array
+              items:
+                type: string
+                default: available
+          - name: create_date
+            in: query
+            explode: true
+            schema:
+              items:
+                type: string
+                default: available
+        operationId: getEntity
+        responses:
+          "405":
+            description: Invalid input
+      post:
+        tags:
+          - task
+        requestBody:
+          $ref: "#/components/requestBodies/task"
+        responses:
+          "400":
+            description: Invalid ID supplied
+          "404":
+            description: Pet not found
+          "405":
+            description: Validation exception
+    /task/{id}:
+      get:
+        tags:
+          -  task
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+              format: int64
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/task"
+          "400":
+            description: Invalid status value
+      patch:
+        tags:
+          - task
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        operationId: update_task
+        requestBody:
+          $ref: "#/components/requestBodies/task"
+        responses:
+          "400":
+            description: Invalid parameters
+          "404":
+            description: task not found
+          "405":
+            description: Validation exception
+      delete:
+        tags:
+          - task
+        operationId: delete_task
+        parameters:
+          - name: id
+            in: path
+            required: true
+            schema:
+              type: integer
+        responses:
+          "400":
+            description: Invalid ID
+          "404":
+            description: entity not found
+    /user/login:
+      get:
+        tags:
+          - user
+        summary: Logs user into the system
+        description: ""
+        operationId: loginUser
+        parameters:
+          - name: username
+            in: query
+            description: The user name for login
+            required: true
+            schema:
+              type: string
+          - name: password
+            in: query
+            description: The password for login in clear text
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            headers:
+              X-Rate-Limit:
+                description: calls per hour allowed by the user
+                schema:
+                  type: integer
+                  format: int32
+              X-Expires-After:
+                description: date in UTC when token expires
+                schema:
+                  type: string
+                  format: date-time
+            content:
+              application/xml:
+                schema:
+                  type: string
+              application/json:
+                schema:
+                  type: string
+          "400":
+            description: Invalid username/password supplied
+    /user/logout:
+      get:
+        tags:
+          - user
+        summary: Logs out current logged in user session
+        description: ""
+        operationId: logoutUser
+        responses:
+          default:
+            description: successful operation
+    "/user/{username}":
+      get:
+        tags:
+          - user
+        summary: Get user by user name
+        description: ""
+        operationId: getUserByName
+        parameters:
+          - name: username
+            in: path
+            description: "The name that needs to be fetched. Use user1 for testing. "
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/xml:
+                schema:
+                  $ref: "#/components/schemas/user"
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/user"
+          "400":
+            description: Invalid username supplied
+          "404":
+            description: User not found
+  servers:
+    - url: https://localhost:8080/api/v1/
+  components:
+    requestBodies:
+      user:
+        content:
+          application/json:
+            schema:
+  #             type: array
+              items:
+                $ref: "#/components/schemas/user"
+        description: request body description
+        required: true
+      location:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/location"
+        required: true
+      object:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/object"
+        required: true
+      contract:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/contract"
+        required: true
+      contractor:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/contractor"
+        required: true
+      report:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/report"
+        required: true
+      process:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/process"
+        required: true
+      task:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/task"
+        description: Entity object that needs to be created
+        required: true
+    schemas:
+      process:
+        type: object
+        required:
+          - id
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+          nextStep:
+            type: integer
+          prevStep:
+            type: integer
+          complete:
+            type: boolean
+            default: false
+      user:
+        type: object
+        required:
+          - id
+          - login
+        properties:
+          id:
+            type: integer
+          login:
+            type: string
+          fullName:
+            type: string
+          email:
+            type: string
+          userStatus:
+            type: integer
+      report:
+        type: object
+        required:
+          - id
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+          export_type:
+            type: string
+      location:
+        type: object
+        required:
+          - id_location
+        properties:
+          id_location: 
+            type: integer
+          code_kladr: 
+            type: number
+          region: 
+            type: string
+          district: 
+            type: string
+          city: 
+            type: string
+          locality: 
+            type: string
+          street: 
+            type: string
+          hause_num: 
+            type: string
+          right_type: 
+            type: string
+          contract_id: 
+            type: integer
+          create_date: 
+            type: string
+          creator: 
+            type: string
+          last_date: 
+            type: string
+          last_modified: 
+            type: string
+      object:
+        type: object
+        required:
+          - id_object
+        properties:
+          id_object: 
+            type: integer
+          id_location: 
+            type: integer
+          id_object_type: 
+            type: integer
+          object_code:
+            type: integer
+          object_name:
+            type: string
+          open_date:
+            type: string
+          status:
+            type: string
+          company_region:
+            type: string
+          company_filial:
+            type: string
+          latitude:
+            type: string
+          longitude:
+            type: string
+          id_format:
+            type: integer
+          area:
+            type: string
+          test_area:
+            type: string
+          note:
+            type: string
+          floor:
+            type: string
+      contract:
+        type: object
+        required:
+          - id
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+          create_date:
+            type: string
+          description:
+            type: string
+      contractor:
+        type: object
+        required:
+          - id
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+          create_date:
+            type: string
+          description:
+            type: string
+          status:
+            type: string
+      task:
+        type: object
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+          creation_date:
+            type: string
+          dates:
+            $ref: "#/components/schemas/task_dates"
+          details:
+            $ref: "#/components/schemas/task_details"
+          aptd_user:
+            $ref: "#/components/schemas/user"
+          file:
+            $ref: "#/components/schemas/file"
+      task_details:
+        type: object
+        properties:
+          task_id:
+            type: integer
+          task_type:
+            type: string
+          details:
+            type: string
+          solution:
+            type: string
+      task_dates:
+        type: object
+        properties:
+          date_type:
+            type: string
+          date_value:
+            type: string
+      file:
+        type: object
+        required:
+          - id
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+          path:
+            type: string
+contentType: yaml

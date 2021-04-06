@@ -1,0 +1,21 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afbe525e38f
+type: Request
+parentId: fld_wrk_621e2600bbe54f63829c3fe135608afbe7116313
+modified: 1617102712288
+created: 1617102712288
+url: "{{ base_url }}/qentity/{{ entity_id }}"
+name: /qentity/{entity_id}
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1617102712288
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

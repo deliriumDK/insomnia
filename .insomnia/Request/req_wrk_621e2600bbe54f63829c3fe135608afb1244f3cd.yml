@@ -1,0 +1,35 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afb1244f3cd
+type: Request
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617188623080
+created: 1617188623080
+url: "{{ base_url }}/object/{{ id }}"
+name: /object/{id}
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "location_id": 0,
+      "location_name": "string",
+      "id": 0,
+      "name": "string",
+      "create_date": "string",
+      "object_type": "string",
+      "description": "string",
+      "status": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1617188623080
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

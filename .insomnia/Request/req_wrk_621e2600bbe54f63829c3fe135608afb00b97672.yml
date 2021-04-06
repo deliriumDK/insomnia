@@ -1,0 +1,21 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afb00b97672
+type: Request
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617185282234
+created: 1617185282234
+url: "{{ base_url }}/contract/{{ id }}"
+name: /contract/{id}
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1617185282234
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

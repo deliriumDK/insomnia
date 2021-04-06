@@ -1,0 +1,22 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afb74a8fbf1
+type: Request
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617179738495
+created: 1617179738495
+url: "{{ base_url }}/task/{{ id }}"
+name: Updates a task with form data
+description: ""
+method: POST
+body:
+  mimeType: application/x-www-form-urlencoded
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1617179738495
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

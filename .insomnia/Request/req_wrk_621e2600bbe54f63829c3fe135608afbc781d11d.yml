@@ -1,0 +1,22 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afbc781d11d
+type: Request
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617179738503
+created: 1617179738503
+url: "{{ base_url }}/process/{{ processId }}"
+name: Updates a process with form data
+description: ""
+method: POST
+body:
+  mimeType: application/x-www-form-urlencoded
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1617179738503
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

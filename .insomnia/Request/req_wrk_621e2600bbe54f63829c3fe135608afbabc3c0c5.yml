@@ -1,0 +1,24 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afbabc3c0c5
+type: Request
+parentId: wrk_621e2600bbe54f63829c3fe135608afb
+modified: 1617179738501
+created: 1617179738501
+url: "{{ base_url }}/process/{{ processId }}"
+name: Deletes a process
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - name: api_key
+    disabled: true
+    value: string
+authentication: {}
+metaSortKey: -1617179738501
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

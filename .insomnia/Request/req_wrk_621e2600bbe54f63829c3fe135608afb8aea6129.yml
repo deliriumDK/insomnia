@@ -1,0 +1,32 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afb8aea6129
+type: Request
+parentId: fld_wrk_621e2600bbe54f63829c3fe135608afbe7116313
+modified: 1617180741563
+created: 1617180741563
+url: "{{ base_url }}/entity"
+name: create new entity
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "id": 0,
+      "name": "qwe",
+      "object_id": 0,
+      "object_type": "string",
+      "status": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1617180741563
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

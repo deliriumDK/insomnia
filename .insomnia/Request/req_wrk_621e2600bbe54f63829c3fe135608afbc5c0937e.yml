@@ -1,0 +1,32 @@
+_id: req_wrk_621e2600bbe54f63829c3fe135608afbc5c0937e
+type: Request
+parentId: fld_wrk_621e2600bbe54f63829c3fe135608afbe7116313
+modified: 1617179959520
+created: 1617179959520
+url: "{{ base_url }}/contractor/{{ id }}"
+name: Update an existing entity
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "id": 0,
+      "name": "qwe",
+      "object_id": 0,
+      "object_type": "string",
+      "status": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1617179959520
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
