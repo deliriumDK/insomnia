@@ -1,7 +1,7 @@
 _id: spc_d710c4659d134695974707975dccff75
 type: ApiSpec
 parentId: wrk_621e2600bbe54f63829c3fe135608afb
-modified: 1617701627063
+modified: 1617702188241
 created: 1616677916535
 fileName: entiry-name.yaml
 contents: >-
@@ -866,7 +866,7 @@ contents: >-
             type: string
           right_type: 
             type: string
-          contract_id: 
+          id_contract: 
             type: integer
           create_date: 
             type: string
