@@ -1,7 +1,7 @@
 _id: spc_d710c4659d134695974707975dccff75
 type: ApiSpec
 parentId: wrk_621e2600bbe54f63829c3fe135608afb
-modified: 1617700756269
+modified: 1617701627063
 created: 1616677916535
 fileName: entiry-name.yaml
 contents: >-
@@ -862,7 +862,7 @@ contents: >-
             type: string
           street: 
             type: string
-          hause_num: 
+          house_num: 
             type: string
           right_type: 
             type: string
